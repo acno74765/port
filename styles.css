@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.loading-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+.ripple {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: 3px solid #000;
+    border-radius: 50%;
+    position: relative;
+    animation: ripple 2s infinite;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0.6);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(7);
+        opacity: 0;
+        border: 2px solid #000;
+    }
+}
+
+.quote-container {
+    display: none;
+}
+
+.quote {
+    font-size: 24px;
+    text-align: center;
+}
